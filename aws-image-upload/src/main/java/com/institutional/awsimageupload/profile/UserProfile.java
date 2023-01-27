@@ -1,6 +1,7 @@
 package com.institutional.awsimageupload.profile;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 public class UserProfile {
     private UUID userProfileId;
@@ -29,8 +30,8 @@ public class UserProfile {
         this.username = username;
     }
 
-    public String getUserProfileImageLink() {
-        return userProfileImageLink;
+    public Optional<String> getUserProfileImageLink() {
+        return Optional.ofNullable(userProfileImageLink);
     }
 
     public void setUserProfileImageLink(String userProfileImageLink) {
